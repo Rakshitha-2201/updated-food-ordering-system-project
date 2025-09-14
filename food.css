@@ -1,0 +1,284 @@
+:root{
+    --primaryColor:#0e6253;
+    --secondaryColor:#ffc107;
+    --whiteColor:#fff;
+    --blackColor:#222;
+    --softGreenColor:#d9f2ee;
+    --darkgreyColor:#a7a7a7;
+    --greyColor:f
+} 
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    outline:none;
+    font-family:'Open Sans',sans-serif;
+    
+}
+body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    
+}
+.sidebar{
+
+    height:100%;
+    width: 250px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    left:0;
+    padding: 2%;
+    background-color:rgb(190, 250, 149);
+    color:rgb(8, 104, 58);
+
+} 
+.sidebar-menus{
+    display: flex;
+    flex-direction: column;  
+    
+}
+.sidebar-menus a , .sidebar-logout a{
+    padding: 8% 8%;
+    margin: 0.5 rem 0;
+    display: flex;
+    align-items:center
+    justify-self:flex-start;
+    gap :1rem;
+    text-decoration: none;
+    color:rgb(8, 104, 58);
+
+}
+.sidebar-menus a ion-icon ,.sidebar-logout a ion-icon {
+
+    font-size: 20px;
+}
+
+.sidebar-menus a:hover ,.sidebar-logout a:hover   {
+
+    background-color:var(--whiteColor);
+    border-radius:50px;    
+    gap:17px;
+} 
+.sidebar-logout{
+
+}
+.main{
+    width: 100%;
+    height:min-content;
+    min-height:100vh;
+    padding: 2%;
+    background-image:url(images/salad.jpg);
+    margin-left: 250px;  
+}
+.main-navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+.menu-toggle{
+    display:none;
+}
+.search{
+
+    width:60%; 
+    height:40px;
+    display:flex;
+    justify-content: space-around;
+    background-color:rgb(255, 255, 255);
+    border-radius:20px;
+}
+.search input{
+    width:80%;
+    height:100%;
+    padding:20px;
+    border:none;
+    border-radius:20px;
+}
+.search-btn{
+    background-color: rgb(98, 97, 105);
+    color:rgb(255, 255, 255);
+    border:none;
+    border-radius:20px;
+    width:120px;
+    cursor:progress;
+}
+.search:hover{
+    box-shadow:rgb(30, 31, 108) 0px 8px 24px;
+
+}
+.search-btn:hover{
+    background-color:rgb(19, 14, 54) ;
+
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cart , .user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color:rgb(30, 29, 30);
+    height:40px;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0 10px;
+    border-radius: 50%;
+    
+}
+
+.cart:hover , .user:hover{
+    background-color:rgb(255, 255, 255) ;
+    box-shadow: rgba(226, 64, 64, 0.2)0px 8px 24px ;
+
+}
+.main-highlight{
+     margin:2% 0;
+     
+     border-radius: 10px;
+     padding:0.5;
+}
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+
+}
+.main-title{
+    font-size: 25px;
+    color:rgb(8, 104, 58); 
+    
+}
+.main-arrow{
+    font-size: 24px;
+
+}
+.back, .forward{
+    cursor: pointer;
+}
+
+.back:hover , .forward:hover{
+    color:#e21515;
+}
+.highlight-wrapper{
+    width: 100%;
+    display:flex;
+    padding:1%;
+    border-radius:8px;
+    gap: 1.5rem;
+    overflow-x:hidden;
+}
+
+.highlight-card{
+    display:flex;
+    flex-direction:row;
+    min-width: 100px;
+    width:80%;
+    height:80;
+    gap:1 rem;
+    border-radius:8px;
+    border:1px solid rgb(56, 105, 41);
+    padding:1%;
+    background-color: #faf4f4;
+    cursor:pointer;
+   
+
+}
+
+
+.highlight-desc h4{
+    color: #222;
+    font-size: 18px;
+    margin-left:10px;
+}
+.highlight-desc p{
+    color: rgb(7, 7, 7);
+    font-size:17px;
+     margin-left:10px;
+}
+
+.highlight-card:hover{
+    background-color:rgb(236, 228, 218);
+    box-shadow: rgba(176,176,176,0.2)  0px 2px 8px 0px;
+    gap:2px;
+}
+
+.main-menus{
+    min-height:50%;
+    border:2px solid black;
+    padding:2%;
+    border-radius:8px;
+}
+
+.main-filter{ 
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    margin-top:1.5rem;
+    gap:1rem; 
+
+}
+
+.back-menus , .forward-menus{
+    cursor:pointer;
+    
+}
+.back-menus:hover , .forward-menus:hover{
+
+    color:rgb(241, 8, 8);
+}
+
+.filter-wrapper{
+    width:100%;
+    justify-content: flex-start;
+    height:100px;
+    gap:1.2rem;
+    display:flex;
+
+}
+
+.filter-card{
+    display: flex;
+    justify-content: space-around;
+    flex-direction:column;
+    align-items:center;
+    min-width:80px;
+    height:100%;
+    color:rgb(27, 76, 27);
+    border-radius:8px;
+    border:1px solid rgb(43, 118, 42);
+    font-size:14px;
+    font-weight: bold;
+    cursor:pointer;
+
+}
+.filter-icon{
+    display:flex;
+    justify-content:center;
+    background-color:rgb(238, 238, 238)
+    width:80%;
+    height:60%;
+    color:var(--primaryColor);
+    font-size: 30px;
+    border-radius:8px;
+    align-items: center;
+}
+.filter-card:hover{
+    background-color: #fbfcfc;
+    color:#222;
+    gap: 2px;
+    
+    
+}
